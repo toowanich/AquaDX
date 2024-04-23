@@ -56,7 +56,7 @@
               <span>{user.name}</span>
             {/if}
           </span>
-          <span class="rating">{user.rating.toLocaleString()}</span>
+          <span class="rating">{game=="ongeki" ? (user.rating/100).toLocaleString() : user.rating.toLocaleString()}</span>
           <span class="accuracy">{(+user.accuracy).toFixed(2)}%</span>
           <span class="fc">{user.fullCombo}</span>
           <span class="ap">{user.allPerfect}</span>

@@ -76,6 +76,14 @@
           it.afterRating /= 10
         })
       }
+      if (game === 'ongeki') {
+        user.rating /= 100
+        trend.forEach(it => it.rating /= 100)
+        user.recent.forEach(it => {
+          it.beforeRating /= 100
+          it.afterRating /= 100
+        })
+      }
 
       const minDate = moment().subtract(TREND_DAYS, 'days').format("YYYY-MM-DD")
       d = {user,
